@@ -12,10 +12,14 @@ namespace OnlineGroceryStore
     {
         static void Main(string[] args)
         {
-            String input;
+            String input1;
+            String input2;
+            String input3;
+           
             do
             {
-                Console.WriteLine("Enter -1 to exit:\n");
+                Console.WriteLine("\n\n******************** Welcome To Online Grocery Store ********************");
+                Console.WriteLine("\nPlease enter your product's amount and code: (Enter -1 to exit)\n");
 
                 ProductFactory pFactory = new ProductFactory();
 
@@ -26,13 +30,24 @@ namespace OnlineGroceryStore
 
                 Calulator c = new Calulator();
 
-                c.Calculate(1, slicedHam);
-                c.Calculate(56, yoghurt);
-                c.Calculate(12, toiletRolls);
+                input1 = Console.ReadLine();
+                if(input1.Equals("-1")) break;
 
-                input = Console.ReadLine();
+                input2 = Console.ReadLine();
+                if(input2.Equals("-1")) break;
 
-            } while (!input.Equals("-1"));
+                input3 = Console.ReadLine();
+                if(input3.Equals("-1")) break;
+                
+                Console.WriteLine("\n------------------ Your Order ------------------");
+                c.Calculate(input1, slicedHam);
+                c.Calculate(input2, yoghurt);
+                c.Calculate(input3, toiletRolls);
+
+
+            } while (true);
         }
+
+       
     }
 }

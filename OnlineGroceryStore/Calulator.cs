@@ -15,9 +15,9 @@ namespace OnlineGroceryStore.Products
         }
 
 
-        public void Calculate(int amount, BaseProduct product)
+        public void Calculate(String input, BaseProduct product)
         {
-
+            int amount = TrimString(input);
 
             Packs filtedPack = FiltThePacksWithAmount( amount, product.getCopyOfPackTypes());
 
@@ -67,6 +67,12 @@ namespace OnlineGroceryStore.Products
             }
 
             return packs;//This is an empty pack
+        }
+
+         private int TrimString(String input){
+            String[] splitString;
+            splitString = input.Split(' ');
+            return Int32.Parse(splitString[0]);
         }
     }
 }
