@@ -7,6 +7,13 @@ using OnlineGroceryStore.Products;
 
 namespace OnlineGroceryStore
 {
+     public enum ProductCode
+    { 
+        SH3,
+        YT2,
+        TR
+    }
+
     class ProductFactory
     {
         public ProductFactory()

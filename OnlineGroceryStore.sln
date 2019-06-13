@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineGroceryStore", "Onlin
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC7DF23A-9F8A-4F69-A519-9044EF12C1AD}"
 	ProjectSection(SolutionItems) = preProject
+		OnlineGroceryStore\Calculator.cs = OnlineGroceryStore\Calculator.cs
 		OnlineGroceryStore\Main.cs = OnlineGroceryStore\Main.cs
 	EndProjectSection
 EndProject

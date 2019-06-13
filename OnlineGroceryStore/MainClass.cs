@@ -18,17 +18,19 @@ namespace OnlineGroceryStore
            
             do
             {
-                Console.WriteLine("\n\n******************** Welcome To Online Grocery Store ********************");
-                Console.WriteLine("\nPlease enter your product's amount and code: (Enter -1 to exit)\n");
+                Console.WriteLine("\n\n***************************************** Welcome To Online Grocery Store *****************************************");
+                Console.WriteLine("\nPlease enter your amount and code(optional) for Sliced Ham, Yoghurt and Toilet Rolls respectively: (Enter -1 to exit)");
+                Console.WriteLine("\n*Note: The amount and code are seperated by a space. Ex: 12 SH3");
+                Console.WriteLine("\n");
+                
+                ProductFactory productFactory = new ProductFactory();
 
-                ProductFactory pFactory = new ProductFactory();
-
-                BaseProduct slicedHam = pFactory.Create(ProductCode.SH3);
-                BaseProduct yoghurt = pFactory.Create(ProductCode.YT2);
-                BaseProduct toiletRolls = pFactory.Create(ProductCode.TR);
+                BaseProduct slicedHam = productFactory.Create(ProductCode.SH3);
+                BaseProduct yoghurt = productFactory.Create(ProductCode.YT2);
+                BaseProduct toiletRolls = productFactory.Create(ProductCode.TR);
 
 
-                Calulator c = new Calulator();
+                Calculator calculator = new Calculator();
 
                 input1 = Console.ReadLine();
                 if(input1.Equals("-1")) break;
@@ -39,15 +41,23 @@ namespace OnlineGroceryStore
                 input3 = Console.ReadLine();
                 if(input3.Equals("-1")) break;
                 
+
                 Console.WriteLine("\n------------------ Your Order ------------------");
-                c.Calculate(input1, slicedHam);
-                c.Calculate(input2, yoghurt);
-                c.Calculate(input3, toiletRolls);
+                calculator.Calculate(TrimString(input1), slicedHam);
+                calculator.Calculate(TrimString(input2), yoghurt);
+                calculator.Calculate(TrimString(input3), toiletRolls);
 
 
             } while (true);
         }
 
-       
+        /// <summary>
+        /// Return the amount of order
+        /// </summary>
+        private static int TrimString(String input){
+            String[] splitString;
+            splitString = input.Split(' ');
+            return Int32.Parse(splitString[0]);
+        }
     }
 }

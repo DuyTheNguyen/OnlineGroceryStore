@@ -8,22 +8,22 @@ using Packs = System.Collections.Generic.SortedList<int, double>;
 
 namespace OnlineGroceryStore.Products
 {
-    class Calulator
+    class Calculator
     {
-        public Calulator()
+        
+        public Calculator()
         {
         }
 
-
-        public void Calculate(String input, BaseProduct product)
+        /// <summary>
+        /// Calculate and print out the result
+        /// </summary>
+        public void Calculate(int amount, BaseProduct product)
         {
-            int amount = TrimString(input);
-
-            Packs filtedPack = FiltThePacksWithAmount( amount, product.getCopyOfPackTypes());
-
+            Packs filteredPacks = FilterThePacksWithAmount( amount, product.getCopyOfPackTypes());
             // Return if could not get the filted pack.
-            if (filtedPack.Count == 0) {
-                Console.WriteLine("Could not get the order of " + product.ProductCode + " with " + amount + " pack(s)\n");
+            if (filteredPacks.Count == 0) {
+                Console.WriteLine("Could not get the order for " + product.ProductCode + " with " + amount + " pack(s)\n");
                 return;
             }
 
@@ -33,7 +33,7 @@ namespace OnlineGroceryStore.Products
             int currentAmount;
             double price = 0;
 
-            foreach (var kvp in filtedPack.Reverse())
+            foreach (var kvp in filteredPacks.Reverse())
             {
                 if (amount < kvp.Key) continue; // continue with the next pack's type if the amount is greater than the current pack's type.
                 
@@ -50,7 +50,12 @@ namespace OnlineGroceryStore.Products
             Console.WriteLine(result);
         }
         
-        private Packs FiltThePacksWithAmount(int amount, Packs packs)
+        
+
+        /// <summary>
+        /// Filter the packs with the
+        /// </summary>
+        private Packs FilterThePacksWithAmount(int amount, Packs packs)
         {
             while (packs.Count > 0)
             {
@@ -67,12 +72,6 @@ namespace OnlineGroceryStore.Products
             }
 
             return packs;//This is an empty pack
-        }
-
-         private int TrimString(String input){
-            String[] splitString;
-            splitString = input.Split(' ');
-            return Int32.Parse(splitString[0]);
         }
     }
 }

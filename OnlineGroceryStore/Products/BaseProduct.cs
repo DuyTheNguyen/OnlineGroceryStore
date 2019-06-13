@@ -7,13 +7,6 @@ using Packs = System.Collections.Generic.SortedList<int, double>;
 
 namespace OnlineGroceryStore.Products
 {
-   
-    public enum ProductCode
-    { 
-        SH3,
-        YT2,
-        TR
-    }
     public abstract class BaseProduct
     {
         protected ProductCode productCode;
