@@ -43,13 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainClass.cs" />
     <Compile Include="ProductFactory.cs" />
     <Compile Include="Products\BaseProduct.cs" />
     <Compile Include="Calulator.cs" />
     <Compile Include="Products\SlicedHam.cs" />
     <Compile Include="Products\ToiletRolls.cs" />
     <Compile Include="Products\Yoghurt.cs" />
-    <Compile Include="Client.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

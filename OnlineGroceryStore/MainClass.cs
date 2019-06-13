@@ -8,7 +8,7 @@ using OnlineGroceryStore.Products;
 
 namespace OnlineGroceryStore
 {
-    class Main
+    class MainClass
     {
         static void Main(string[] args)
         {
