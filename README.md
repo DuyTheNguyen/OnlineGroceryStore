@@ -1,13 +1,29 @@
 # OnlineGroceryStore-DuyTheNguyen
 
 ## Assumption
-
+***
+### **Input**
+***
 User enters the product's amount and code (optional) for Sliced Ham, Yoghurt and Toilet Rolls respectively.
 
 For example:   
 10 SH3  
 12 YT2  
 43 TR  
+
+
+***
+### **Class Diagram**
+***
+![Class Diagram!](/class.PNG "Class Diagram")
+
+***
+### **Design Pattern**
+***
+Factory method
+
+
+
 ***
 ### **Algorithm**
 ***
@@ -47,12 +63,3 @@ Loop through LPT in reverse order
 
 
 
-***
-### **Design Pattern**
-***
-Factory method
-
-***
-### **Class Diagram**
-***
-![Class Diagram!](/class.PNG "Class Diagram")
