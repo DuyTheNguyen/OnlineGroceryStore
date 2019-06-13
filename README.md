@@ -28,7 +28,7 @@ For example:
 28 YT2 
 
 List of pack types (LPT) (3 elements): [4, 10, 15]  
-Ammount: 28
+Amount: 28
 
 Loop through LPT in reverse order   
 *(1st Loop)* 28 % 15 = 7  
@@ -38,7 +38,7 @@ Loop through LPT in reverse order
 ***Since there is still remaining amount which is 3, the largest pack types, which is 15 ,will be removed.***
 
 New list of pack types (2 elements): [4, 10]  
-Ammount: 28
+Amount: 28
 
 Loop through LPT in reverse order   
 *(1st Loop)*  28 % 10 = 8  
