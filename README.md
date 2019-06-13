@@ -55,4 +55,4 @@ Factory method
 ***
 ### **Class Diagram**
 ***
-![Class Diagram!](/class.png "Class Diagram")
+![Class Diagram!](/class.PNG "Class Diagram")
